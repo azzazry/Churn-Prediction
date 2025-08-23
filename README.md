@@ -45,29 +45,16 @@ uvicorn app.main:app --reload
 [
   {
     "Username": "Aaz Zazri Nugraha",
-    "CreditScore": 650,
-    "Geography": "Indonesia",
+    "CreditScore": 820,
+    "Geography": "Germany",
     "Gender": "Male",
     "Age": 22,
-    "Tenure": 3,
-    "Balance": 120000.50,
+    "Tenure": 7,
+    "Balance": 120000.0,
     "NumOfProducts": 2,
     "HasCrCard": 1,
     "IsActiveMember": 1,
-    "EstimatedSalary": 50000.0
-  },
-  {
-    "Username": "Nisa Muthmainnah",
-    "CreditScore": 720,
-    "Geography": "Germany",
-    "Gender": "Female",
-    "Age": 23,
-    "Tenure": 5,
-    "Balance": 80000.0,
-    "NumOfProducts": 1,
-    "HasCrCard": 1,
-    "IsActiveMember": 0,
-    "EstimatedSalary": 60000.0
+    "EstimatedSalary": 6000.0
   }
 ]
 ```
