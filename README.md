@@ -1,4 +1,5 @@
 # Churn Prediction API with FastAPI
+The goal: an easy-to-use REST API that integrates predictive analytics into business workflows, helping decision-makers act before a customer leaves.
 
 ## 1) Setup
 
@@ -6,10 +7,10 @@
 python -m venv .venv
 
 # Windows
-. .venv/Scripts/activate
+.venv/Scripts/activate
 
 # macOS/Linux
-# source .venv/bin/activate
+source .venv/bin/activate
 
 pip install -r requirements.txt
 ````
