@@ -1,14 +1,16 @@
-````md
-# Churn Project – Real-World DS
+# Churn Prediction API with FastAPI
 
 ## 1) Setup
 
 ```bash
 python -m venv .venv
+
 # Windows
 . .venv/Scripts/activate
+
 # macOS/Linux
 # source .venv/bin/activate
+
 pip install -r requirements.txt
 ````
 
@@ -19,7 +21,9 @@ Place `data/Churn_Modelling.csv` in the `data/` folder.
 ## 3) Train
 
 ```bash
+python -m src.preprocessing
 python -m src.train_model
+python -m src.evaluate_model
 ```
 
 Artifacts:
@@ -65,5 +69,4 @@ uvicorn app.main:app --reload
     "EstimatedSalary": 60000.0
   }
 ]
-
 ```
