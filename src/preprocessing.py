@@ -48,24 +48,3 @@ def build_preprocessor() -> ColumnTransformer:
         verbose_feature_names_out=True
     )
     return preprocessor
-
-def ensure_feature_order(df: pd.DataFrame) -> pd.DataFrame:
-    safe_columns = {
-        "CreditScore": 600,
-        "Geography": "France",
-        "Gender": "Male",
-        "Age": 40,
-        "Tenure": 5,
-        "Balance": 0.0,
-        "NumOfProducts": 1,
-        "HasCrCard": 0,
-        "IsActiveMember": 1,
-        "EstimatedSalary": 50000.0,
-    }
-    out = pd.DataFrame()
-    for col in ALL_FEATURES:
-        if col in df.columns:
-            out[col] = df[col]
-        else:
-            out[col] = safe_columns[col]
-    return out
