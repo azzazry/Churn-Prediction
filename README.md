@@ -2,6 +2,7 @@
 # Churn Project – Real-World DS
 
 ## 1) Setup
+
 ```bash
 python -m venv .venv
 # Windows
