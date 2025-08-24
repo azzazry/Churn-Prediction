@@ -1,5 +1,4 @@
 from __future__ import annotations
-import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
