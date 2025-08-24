@@ -1,25 +1,42 @@
-# Churn Prediction API with FastAPI
-The goal: an easy-to-use REST API that integrates predictive analytics into business workflows, helping decision-makers act before a customer leaves.
+# 📊 Churn Prediction API with FastAPI
 
-## 1) Setup
+**Goal:**
+Menyediakan REST API yang mudah digunakan untuk melakukan prediksi *customer churn*, sehingga bisnis dapat mengambil tindakan sebelum pelanggan pergi.
+
+---
+
+## 🚀 1) Setup Environment
 
 ```bash
+# Buat virtual environment
 python -m venv .venv
 
+# Aktifkan virtual environment
 # Windows
-.venv/Scripts/activate
+.venv\Scripts\activate
 
 # macOS/Linux
 source .venv/bin/activate
 
+# Install dependencies
 pip install -r requirements.txt
-````
+```
 
-## 2) Data
+---
 
-Place `data/Churn_Modelling.csv` in the `data/` folder.
+## 📂 2) Dataset
 
-## 3) Train
+Letakkan file dataset berikut ke dalam folder `data/`:
+
+```
+data/Churn_Modelling.csv
+```
+
+---
+
+## 🏋️ 3) Training Pipeline
+
+Jalankan preprocessing, training, dan evaluasi model:
 
 ```bash
 python -m src.preprocessing
@@ -27,21 +44,30 @@ python -m src.train_model
 python -m src.evaluate_model
 ```
 
-Artifacts:
+**Artifacts yang dihasilkan:**
 
-- `models/churn_model.pkl`
-- `models/metrics.json`
-- `models/test_predictions.csv`
+* `models/churn_model.pkl` – Model yang sudah dilatih
+* `models/metrics.json` – Metrik evaluasi model
+* `models/test_predictions.csv` – Hasil prediksi pada data uji
 
-## 4) Serve API
+---
+
+## 🌐 4) Menjalankan API
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-## 5) Example Request with JSON
+API akan berjalan di:
+[http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-```bash
+---
+
+## 🧩 5) Contoh Request (JSON)
+
+Gunakan *POST request* ke endpoint `/predict/`:
+
+```json
 [
   {
     "Username": "Aaz Zazri Nugraha",
@@ -58,3 +84,20 @@ uvicorn app.main:app --reload
   }
 ]
 ```
+
+---
+
+## 📌 Endpoint Utama
+
+| Endpoint    | Method | Deskripsi                      |
+| ----------- | ------ | ------------------------------ |
+| `/predict/` | POST   | Prediksi churn dari input JSON |
+
+---
+
+## 🛠 Tech Stack
+
+* **FastAPI** – Framework backend untuk API
+* **Scikit-learn** – Model machine learning
+* **Pandas & NumPy** – Data processing
+* **Uvicorn** – ASGI server
