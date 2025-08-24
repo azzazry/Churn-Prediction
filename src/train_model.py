@@ -68,7 +68,7 @@ def main():
         "recall_1": report['1']['recall'],
         "accuracy": report['accuracy'],
         "macro_f1": report['macro avg']['f1-score'],
-        "weighted_f1": report['weighted avg']['f1-score']        
+        "weighted_f1": report['weighted avg']['f1-score']
     }
     
     print(json.dumps(metrics, indent=2))
